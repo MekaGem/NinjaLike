@@ -3,6 +3,7 @@ package game;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -121,6 +122,16 @@ public class NinjaLikeGame implements ApplicationListener {
 					} else {
 						batch.draw(stone, x * 32, y * 32);
 					}
+					room.setVisited(x, y, true);
+				} else if (room.isVisited(x, y)) {
+					Color c = batch.getColor();
+					batch.setColor(1.0f, 1.0f, 1.0f, 0.5f);
+					if (room.getWall()[x][y]) {
+						batch.draw(wall, x * 32, y * 32);
+					} else {
+						batch.draw(stone, x * 32, y * 32);
+					}
+					batch.setColor(c);
 				}
 			}
 		}

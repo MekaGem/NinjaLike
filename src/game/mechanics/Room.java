@@ -1,12 +1,14 @@
 package game.mechanics;
 
-import com.badlogic.gdx.math.MathUtils;
+import game.geom.Segment;
+import game.geom.Vector2D;
 
 public class Room {
 	private final int width;
 	private final int height;
 	private final boolean [][] wall;
 	private final boolean [][] passability;
+	private final boolean [][] visited;
 
 	private Ninja ninja;
 
@@ -15,10 +17,12 @@ public class Room {
 		this.height = height;
 		wall = new boolean [width][height];
 		passability = new boolean [width][height];
+		visited = new boolean [width][height];
 		for (int x = 0; x < width; ++x) {
 			for (int y = 0; y < height; ++y) {
 				wall[x][y] = false;
 				passability[x][y] = false;
+				visited[x][y] = false;
 			}
 		}
 	}
@@ -55,6 +59,14 @@ public class Room {
 		return emptyCells;
 	}
 
+	public void setVisited(int x, int y, boolean visited) {
+		this.visited[x][y] = visited;
+	}
+
+	public boolean isVisited(int x, int y) {
+		return visited[x][y];
+	}
+
 	public boolean isInto(int x, int y) {
 		return x >= 0 && x < width && y >= 0 && y < height;
 	}
@@ -70,18 +82,7 @@ public class Room {
 		}
 	}
 
-	private int gcd(int a, int b) {
-		int c;
-		while (a > 0) {
-			b %= a;
-			c = a;
-			a = b;
-			b = c;
-		}
-		return b;
-	}
-
-	private boolean checkCell(int x, int y, int cx, int cy) {
+	private boolean isClearCell(int x, int y, int cx, int cy) {
 		if (x == cx && y == cy) {
 			return true;
 		}
@@ -91,9 +92,25 @@ public class Room {
 		return !wall[cx][cy];
 	}
 
+	public boolean inSight(Segment sight, int cx, int cy) {
+		if (sight.intersectsWith(new Segment(new Vector2D(cx, cy), new Vector2D(cx + 1, cy)))) {
+			return true;
+		}
+		if (sight.intersectsWith(new Segment(new Vector2D(cx, cy), new Vector2D(cx, cy + 1)))) {
+			return true;
+		}
+		if (sight.intersectsWith(new Segment(new Vector2D(cx + 1, cy), new Vector2D(cx + 1, cy + 1)))) {
+			return true;
+		}
+		if (sight.intersectsWith(new Segment(new Vector2D(cx, cy + 1), new Vector2D(cx + 1, cy + 1)))) {
+			return true;
+		}
+		return false;
+	}
+
 	public boolean isVisible(int x, int y) {
 		Position p = new Position(x, y);
-		if (p.distanceTo(ninja.getPosition()) > 50) {
+		if (p.distanceTo(ninja.getPosition()) > 5) {
 			return false;
 		}
 
@@ -101,45 +118,37 @@ public class Room {
 			return true;
 		}
 
-		int nx = ninja.getX();
-		int ny = ninja.getY();
-		int w = x - ninja.getX();
-		int h = y - ninja.getY();
+		Vector2D a = new Vector2D(ninja.getX() + 0.5, ninja.getY() + 0.5);
 
-		if (w == 0) {
-			int hstep = h / Math.abs(h);
-			for (int dh = hstep; dh != h; dh += hstep) {
-				if (!checkCell(x, y, nx, ny + dh)) {
-					return false;
+		final double [] dx = {0, 0.5, 0, -0.5};
+		final double [] dy = {0.5, 0, -0.5, 0};
+
+		int visibleSides = 4;
+
+		for (int index = 0; index < 4; ++index) {
+			Vector2D b = new Vector2D(x + 0.5 + dx[index], y + 0.5 + dy[index]);
+			Segment sight = new Segment(a, b);
+
+			int sx, sy;
+			int fx, fy;
+
+			sx = Math.min(x, ninja.getX());
+			sy = Math.min(y, ninja.getY());
+			fx = Math.max(x, ninja.getX());
+			fy = Math.max(y, ninja.getY());
+
+			boolean found = false;
+			for (int cx = sx; cx <= fx && !found; ++cx) {
+				for (int cy = sy; cy <= fy && !found; ++cy) {
+					if (inSight(sight, cx, cy) && !isClearCell(x, y, cx, cy)) {
+						found = true;
+						visibleSides--;
+					}
 				}
 			}
-			return true;
-		} else {
-			double k = (double)h / w;
-			double wstep = (double)w / (4 * Math.abs(w));
-
-			for (double dw = 0; Math.abs(dw) <= Math.abs(w); dw += wstep) {
-				int cx = (int)(nx + 0.5 + dw);
-				int cy = (int)(ny + 0.5 + dw * k);
-				if (!checkCell(x, y, cx, cy)) {
-					return false;
-				}
-			}
-
-			if (true) return true;
-
-			int gcd = gcd(w, h);
-			for (int index = 1; index < gcd; ++index) {
-				int cx = nx + (w * index) / gcd;
-				int cy = ny + (h * index) / gcd;
-
-				if (!checkCell(x, y, cx, cy) || !checkCell(x, y, cx - 1, cy)
-						|| !checkCell(x, y, cx, cy - 1) || !checkCell(x, y, cx - 1, cy - 1)) {
-					return false;
-				}
-			}
-			return true;
 		}
+
+		return visibleSides > 0;
 	}
 
 	public boolean checkPassability() {

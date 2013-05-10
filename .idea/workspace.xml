@@ -2,31 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" name="Default" comment="First commit">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/images/ninja.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/images/stone.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/images/wall.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/images/weapons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/MekaGem.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/mechanics/Ninja.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NinjaLike.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/NinjaLikeGame.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/mechanics/Position.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/mechanics/Room.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/mechanics/RoomGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/mechanics/Unit.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/description.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/libgdx.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/geom/Segment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/geom/Vector2D.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/libgdx.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NinjaLike.iml" afterPath="$PROJECT_DIR$/NinjaLike.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/NinjaLikeGame.java" afterPath="$PROJECT_DIR$/src/game/NinjaLikeGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/mechanics/Room.java" afterPath="$PROJECT_DIR$/src/game/mechanics/Room.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/mechanics/RoomGenerator.java" afterPath="$PROJECT_DIR$/src/game/mechanics/RoomGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RogueLike.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,15 +17,17 @@
     <file path="/Main.java" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368143448484" ignored="false" />
     <file path="/RogueLikeGame.java" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368133069718" ignored="false" />
     <file path="/a.java" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368131723089" ignored="false" />
-    <file path="/Room.java" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368149376107" ignored="false" />
+    <file path="/Room.java" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368196179088" ignored="false" />
     <file path="/RoomFactory.java" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368136934544" ignored="false" />
     <file path="/RoomGenerator.java" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368140296161" ignored="false" />
     <file path="/Player.java" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368136305518" ignored="false" />
     <file path="/Unit.java" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368139986665" ignored="false" />
     <file path="/Position.java" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368142044452" ignored="false" />
-    <file path="/NinjaLikeGame.java" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368142337259" ignored="false" />
+    <file path="/NinjaLikeGame.java" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368196736292" ignored="false" />
     <file path="/MyInputProcessor.java" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368138459751" ignored="false" />
-    <file path="/Dummy.txt" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368149837552" ignored="false" />
+    <file path="/Dummy.txt" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368197057522" ignored="false" />
+    <file path="/Vector2D.java" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368180870362" ignored="false" />
+    <file path="/Segment.java" changelist="e6c12f39-b64a-43a2-bde3-e68ef3ef0b8a" time="1368195555246" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +42,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -94,6 +78,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -115,7 +100,7 @@
       <file leaf-file-name="NinjaLikeGame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/NinjaLikeGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="34" selection-start="2998" selection-end="2998" vertical-scroll-proportion="0.0">
+            <state line="127" column="36" selection-start="3281" selection-end="3281" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,16 +109,36 @@
       <file leaf-file-name="NinjaLike.iml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NinjaLike.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
+            <state line="12" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Room.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Room.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/mechanics/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="65" selection-start="2468" selection-end="2468" vertical-scroll-proportion="0.38020834">
+            <state line="66" column="29" selection-start="1285" selection-end="1285" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vector2D.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/geom/Vector2D.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="33" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Segment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/game/geom/Segment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="62" selection-start="433" selection-end="433" vertical-scroll-proportion="-0.042944785">
               <folding />
             </state>
           </provider>
@@ -160,7 +165,7 @@
       <file leaf-file-name="Position.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/mechanics/Position.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="53" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
+            <state line="3" column="31" selection-start="77" selection-end="146" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -169,7 +174,7 @@
       <file leaf-file-name="RoomGenerator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/mechanics/RoomGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="16" selection-start="888" selection-end="888" vertical-scroll-proportion="0.0">
+            <state line="5" column="55" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -202,19 +207,19 @@
         <option value="$PROJECT_DIR$/src/game/mechanics/Ninja.java" />
         <option value="$PROJECT_DIR$/src/game/MyInputProcessor.java" />
         <option value="$PROJECT_DIR$/src/game/mechanics/Unit.java" />
-        <option value="$PROJECT_DIR$/src/game/mechanics/RoomGenerator.java" />
         <option value="$PROJECT_DIR$/src/game/mechanics/Position.java" />
-        <option value="$PROJECT_DIR$/src/game/NinjaLikeGame.java" />
         <option value="$PROJECT_DIR$/src/game/Main.java" />
+        <option value="$PROJECT_DIR$/src/game/mechanics/RoomGenerator.java" />
+        <option value="$PROJECT_DIR$/src/game/geom/Segment.java" />
+        <option value="$PROJECT_DIR$/src/game/geom/Vector2D.java" />
         <option value="$PROJECT_DIR$/src/game/mechanics/Room.java" />
+        <option value="$PROJECT_DIR$/src/game/NinjaLikeGame.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1932" />
-    <option name="height" value="1056" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -244,6 +249,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -312,6 +318,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NinjaLike" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NinjaLike" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -322,13 +350,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -336,7 +363,7 @@
     <property name="options.lastSelected" value="preferences.sourceCode.Java" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/libgdx" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Pref" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -431,14 +458,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39910814" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -452,12 +480,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24491979" sideWeight="0.67112595" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32887402" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24390244" sideWeight="0.6733167" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32668328" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -527,20 +554,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/game/mechanics/RoomGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="83" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/NinjaLikeGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="82" selection-start="1521" selection-end="1521" vertical-scroll-proportion="0.0">
@@ -551,7 +564,9 @@
     <entry file="file://$PROJECT_DIR$/src/game/mechanics/Room.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="16" selection-start="773" selection-end="773" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -585,7 +600,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NinjaLike.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
+        <state line="12" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -604,13 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/mechanics/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="53" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="44" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
@@ -618,23 +626,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/mechanics/RoomGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/game/mechanics/Position.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="16" selection-start="888" selection-end="888" vertical-scroll-proportion="0.0">
+        <state line="3" column="31" selection-start="77" selection-end="146" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/NinjaLikeGame.java">
+    <entry file="file://$PROJECT_DIR$/src/game/mechanics/RoomGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="34" selection-start="2998" selection-end="2998" vertical-scroll-proportion="0.0">
+        <state line="5" column="55" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/geom/Vector2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="33" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/mechanics/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="65" selection-start="2468" selection-end="2468" vertical-scroll-proportion="0.38020834">
+        <state line="66" column="29" selection-start="1285" selection-end="1285" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/NinjaLikeGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="36" selection-start="3281" selection-end="3281" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/geom/Segment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="62" selection-start="433" selection-end="433" vertical-scroll-proportion="-0.042944785">
           <folding />
         </state>
       </provider>
@@ -704,7 +735,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>libgdx</last-edited>
+          <last-edited>libgdx-nightly-latest</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

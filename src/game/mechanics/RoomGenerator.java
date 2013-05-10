@@ -3,7 +3,7 @@ package game.mechanics;
 import java.util.Random;
 
 public class RoomGenerator {
-	private static final Random random = new Random();
+	private static final Random random = new Random(100);
 
 	private RoomGenerator() {
 	}
